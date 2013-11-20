@@ -1,5 +1,11 @@
 module Pizza
   class Pie
+  	attr_reader :toppings
+  	
+  	def initialize(toppings)
+  		@toppings = toppings 
+  	end
+
   end
 
   class Topping
