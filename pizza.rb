@@ -1,10 +1,20 @@
 module Pizza
   class Pie
-  	attr_reader :toppings
+  	attr_reader :toppings, :delivery_time
 
   	def initialize(toppings=[Pizza::Topping.new('cheese', vegetarian: true)])
-  		@toppings = toppings 
+  		@toppings = toppings
+      @delivery_time = Time.now+ 30*60
   	end
+
+    def deliver!
+      @delivery_time = deliver!
+    end
+
+    def late?
+      Time.now > @delivery_time
+    end
+
 
   end
 
